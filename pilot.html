@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Pilot Program | Chitraka</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-link logo-blue"></i> Chitraka
+            </a>
+            <ul class="nav-links">
+                <li class="nav-item"><a href="index.html">Overview</a></li>
+                <li class="nav-item"><a href="problem.html">The Problem</a></li>
+                <li class="nav-item"><a href="solution.html">Our Solution</a></li>
+            </ul>
+            <a href="pilot.html" class="btn btn-primary nav-cta">Join Pilot</a>
+        </div>
+    </nav>
+
+    <div class="container" style="padding-top: 140px; padding-bottom: 80px;">
+        <div class="glass-panel"
+            style="max-width: 800px; margin: 0 auto; padding: 60px; border-top: 2px solid var(--accent-trust);">
+            <div style="text-align: center; margin-bottom: 50px;">
+                <h1 style="margin-bottom: 15px;">Join the Pilot Network</h1>
+                <p style="color: var(--text-muted);">We are onboarding select partners for Q1 2026. Secure your spot in
+                    the future of food safety.</p>
+            </div>
+
+            <form class="pilot-form" id="pilotForm">
+                <div class="form-group">
+                    <label
+                        style="display: block; margin-bottom: 8px; font-size: 0.9rem; color: var(--text-muted);">Company
+                        Name</label>
+                    <input type="text" placeholder="e.g. Global Foods Inc." required>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="form-group">
+                        <label
+                            style="display: block; margin-bottom: 8px; font-size: 0.9rem; color: var(--text-muted);">Contact
+                            Name</label>
+                        <input type="text" placeholder="First Last" required>
+                    </div>
+                    <div class="form-group">
+                        <label
+                            style="display: block; margin-bottom: 8px; font-size: 0.9rem; color: var(--text-muted);">Work
+                            Email</label>
+                        <input type="email" placeholder="name@company.com" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label
+                        style="display: block; margin-bottom: 8px; font-size: 0.9rem; color: var(--text-muted);">Supply
+                        Chain Role</label>
+                    <select required>
+                        <option value="" disabled selected>Select your role...</option>
+                        <option value="producer">Producer / Farm</option>
+                        <option value="distributor">Logistics / Distributor</option>
+                        <option value="retailer">Retailer / Supermarket</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label
+                        style="display: block; margin-bottom: 8px; font-size: 0.9rem; color: var(--text-muted);">Message
+                        / Specific Challenges</label>
+                    <textarea placeholder="Tell us about your current traceability challenges..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-bottom">
+            &copy; 2025 Chitraka Inc. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Solution | Chitraka</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .journey-step {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .journey-line {
+            position: absolute;
+            left: 30px;
+            top: 60px;
+            bottom: -60px;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--accent-trust), rgba(255, 255, 255, 0.1));
+            z-index: -1;
+        }
+
+        .step-last .journey-line {
+            display: none;
+        }
+
+        .step-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--bg-dark);
+            border: 2px solid var(--accent-trust);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--accent-trust);
+            flex-shrink: 0;
+            box-shadow: 0 0 20px rgba(10, 255, 194, 0.2);
+        }
+
+        .step-content {
+            padding-top: 10px;
+        }
+
+        .step-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 15px;
+            max-width: 600px;
+        }
+
+        .hash-code {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            background: rgba(0, 0, 0, 0.3);
+            padding: 5px 10px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-link logo-blue"></i> Chitraka
+            </a>
+            <ul class="nav-links">
+                <li class="nav-item"><a href="index.html">Overview</a></li>
+                <li class="nav-item"><a href="problem.html">The Problem</a></li>
+                <li class="nav-item"><a href="solution.html" class="active">Our Solution</a></li>
+            </ul>
+            <a href="pilot.html" class="btn btn-primary nav-cta">Join Pilot</a>
+        </div>
+    </nav>
+
+    <div class="container" style="padding-top: 140px; padding-bottom: 100px;">
+        <span class="section-label highlight-trust">End-to-End Visibility</span>
+        <h1 class="section-title">The Immutable Journey</h1>
+        <p style="max-width: 800px; font-size: 1.2rem; color: var(--text-muted); margin-bottom: 80px;">
+            Every hand that touches said food logs a transaction on the blockchain. This creates an unbreakable chain of
+            custody from the soil to the shelf.
+        </p>
+
+        <!-- Journey Visualization -->
+        <div style="max-width: 800px; margin: 0 auto;">
+
+            <!-- Step 1 -->
+            <div class="journey-step">
+                <div class="journey-line"></div>
+                <div class="step-icon"><i class="fa-solid fa-tractor"></i></div>
+                <div class="step-content">
+                    <h3>Harvest & Tagging</h3>
+                    <div class="step-card">
+                        <p>Farmer harvests produce. A digital twin is created with location (GPS), time, and batch size
+                            data.</p>
+                        <div class="hash-code"><i class="fa-solid fa-hashtag"></i> Block: 0x8F...3A2 | Signed by:
+                            Farm_01</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="journey-step">
+                <div class="journey-line"></div>
+                <div class="step-icon"><i class="fa-solid fa-box"></i></div>
+                <div class="step-content">
+                    <h3>Processing & QA</h3>
+                    <div class="step-card">
+                        <p>Produce is washed and packaged. Quality sensors upload temperature and contamination checks
+                            automatically.</p>
+                        <div class="hash-code"><i class="fa-solid fa-hashtag"></i> Block: 0x9B...1C4 | Signed by:
+                            QA_Lab_Auto</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="journey-step">
+                <div class="journey-line"></div>
+                <div class="step-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                <div class="step-content">
+                    <h3>Distribution</h3>
+                    <div class="step-card">
+                        <p>GPS tracking during transit ensures cold chain compliance. Any temperature deviation triggers
+                            a smart contract alert.</p>
+                        <div class="hash-code"><i class="fa-solid fa-hashtag"></i> Block: 0x2D...8E1 | Signed by:
+                            Logistics_Sensors</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="journey-step step-last">
+                <div class="step-icon"><i class="fa-solid fa-qrcode"></i></div>
+                <div class="step-content">
+                    <h3>Retail & Consumption</h3>
+                    <div class="step-card">
+                        <p>Retailer scans to receive. Customer scans QR code on packaging to see the entire history.</p>
+                        <div style="margin-top: 15px;">
+                            <button class="btn btn-ghost" style="font-size: 0.8rem;"><i class="fa-solid fa-camera"></i>
+                                Try Demo Scan</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div
+            style="text-align: center; margin-top: 100px; padding: 60px; background: rgba(10, 255, 194, 0.05); border: 1px solid var(--border-tech); border-radius: 8px;">
+            <h2 style="margin-bottom: 20px;">Ready to secure your supply chain?</h2>
+            <p style="margin-bottom: 30px; color: var(--text-muted);">Join our pilot program and start tracking your
+                first product in under 2 weeks.</p>
+            <a href="pilot.html" class="btn btn-primary">Join Pilot Program</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-bottom">
+            &copy; 2025 Chitraka Inc. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,81 +1,65 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- Stats Counter Animation ---
-    const counters = document.querySelectorAll('.counter');
-    const speed = 200; // The lower the slower
+    // --- Highlight Active Nav Link ---
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.nav-links a');
 
-    const animateCounters = () => {
-        counters.forEach(counter => {
-            const updateCount = () => {
-                const target = +counter.getAttribute('data-target');
-                const count = +counter.innerText;
-
-                // Lower inc for float handling if needed (though logic uses ceil)
-                const inc = target / speed;
-
-                if (count < target) {
-                    counter.innerText = Math.ceil(count + inc);
-                    setTimeout(updateCount, 20);
-                } else {
-                    counter.innerText = target;
-                }
-            };
-            updateCount();
-        });
-    };
-
-    // Trigger animation when stats section is in view
-    let animated = false;
-    const statsSection = document.querySelector('.stats-section');
-
-    const onScroll = () => {
-        const sectionPos = statsSection.getBoundingClientRect().top;
-        const screenPos = window.innerHeight / 1.3;
-
-        if (sectionPos < screenPos && !animated) {
-            animateCounters();
-            animated = true;
+    navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPath.substring(currentPath.lastIndexOf('/') + 1)) {
+            link.classList.add('active');
         }
-    };
-
-    window.addEventListener('scroll', onScroll);
-
-
-    // --- Simulated Live Dashboard Updates ---
-
-    // Randomly fluctuate the temperature and humidity bars slightly
-    const bars = document.querySelectorAll('.bar');
-
-    setInterval(() => {
-        bars.forEach(bar => {
-            // Get current width logic would be here, but for simple effect we stir it
-            // This is just a visual flicker effect
-            const originalWidth = bar.style.width;
-            // We won't change width deeply to avoid layout breaks, 
-            // but we can toggle opacity or brightness slightly
-            bar.style.opacity = (Math.random() * 0.5) + 0.5;
-        });
-    }, 2000);
-
-    // Pulse effect for the "Live" status dot is handled in CSS, 
-    // but we can randomly "receive" a new doc
-
-    // --- Glass Card Tilt Effect (Optional Polish) ---
-    const cards = document.querySelectorAll('.glass-card');
-
-    cards.forEach(card => {
-        card.addEventListener('mousemove', (e) => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-
-            // Subtle lighting effect
-            card.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(255,255,255,0.1), rgba(255,255,255,0.05) 40%)`;
-        });
-
-        card.addEventListener('mouseleave', () => {
-            card.style.background = ''; // reset
-        });
     });
+
+    // --- Timeline Animation (Problem Page) ---
+    const goodBar = document.querySelector('.good-bar');
+    if (goodBar) {
+        // Simple intersection observer to trigger animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Animate width to represent "5 Seconds" vs the full width
+                    // Visually we want it to shrink to a tiny sliver to show speed
+                    // But for the label to be readable we keep it small but visible
+                    // Actually, the CSS set it to 1% initially. Let's expand it slightly or keep it small.
+                    // The contrast is: Bad Bar = 100%, Good Bar = 2%
+                    // We can just add a class or set width directly if needed. 
+                    // Let's just ensure the transition happens.
+                    goodBar.style.width = '2%'; // Ensure it stays small or animates to this
+                }
+            });
+        });
+        observer.observe(goodBar);
+    }
+
+    // --- Pilot Form Handling ---
+    const form = document.getElementById('pilotForm');
+    if (form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = form.querySelector('button[type="submit"]');
+            const originalText = btn.innerText;
+
+            btn.innerText = 'Submitting...';
+            btn.style.opacity = '0.7';
+
+            // Mock submission
+            setTimeout(() => {
+                btn.innerText = 'Application Received';
+                btn.style.background = 'var(--india-green)'; // Using var even if not defined locally, fallback to color
+                btn.style.backgroundColor = '#138808';
+                form.reset();
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.style.background = ''; // Reset to CSS
+                    btn.style.backgroundColor = '';
+                    btn.style.opacity = '1';
+                }, 3000);
+            }, 1500);
+        });
+    }
+
+    // --- Hero Pulse Effect (Index Page) ---
+    // The CSS animation handles the red pulse, but we could add random data glitches here for "tech" feel
+    // if requested. For now, CSS keeps it clean.
 
 });
