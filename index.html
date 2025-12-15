@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpiceTrace - Indian Food Supply Chain Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar glass-panel">
+        <div class="container">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-leaf"></i></span>
+                SpiceTrace
+            </a>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#featured">Supply Chains</a></li>
+                <li><a href="#dashboard">Live Dashboard</a></li>
+                <li><a href="#partners">Partners</a></li>
+            </ul>
+            <a href="#join" class="btn btn-primary">Get Started</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero" class="hero-section">
+        <div class="background-map"></div> <!-- CSS/SVG map container -->
+        <div class="container hero-content">
+            <h1>From Farm to Plate: <span class="gradient-text">Transparent</span> Indian Food Supply Chains</h1>
+            <p class="subhead">Track, verify, and manage every ingredient with blockchain-enabled traceability.</p>
+            <div class="cta-group">
+                <a href="#" class="btn btn-primary">Get Started</a>
+                <a href="#dashboard" class="btn btn-secondary">View Live Dashboard</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Stats Bar -->
+    <section class="stats-section">
+        <div class="container stats-grid">
+            <div class="stat-card glass-card">
+                <div class="stat-icon"><i class="fa-solid fa-user-check"></i></div>
+                <h3 class="counter" data-target="27000">0</h3>
+                <p>Farmers Onboarded</p>
+            </div>
+            <div class="stat-card glass-card">
+                <div class="stat-icon"><i class="fa-solid fa-box-open"></i></div>
+                <h3 class="counter" data-target="25000">0</h3>
+                <p>Products Tracked</p>
+            </div>
+            <div class="stat-card glass-card">
+                <div class="stat-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                <h3 class="counter" data-target="12000">0</h3>
+                <p>Supply Nodes</p>
+            </div>
+            <div class="stat-card glass-card">
+                <div class="stat-icon"><i class="fa-solid fa-leaf"></i></div>
+                <h3><span class="counter" data-target="3.4">0</span>k</h3>
+                <p>Tons Carbon Saved</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Supply Chains -->
+    <section id="featured" class="featured-section">
+        <div class="container">
+            <h2 class="section-title">Hot This Season</h2>
+            <p class="section-desc">Explore high-demand supply chains with verified origins and quality checks.</p>
+
+            <div class="cards-grid">
+                <!-- Card 1 -->
+                <div class="product-card glass-card">
+                    <div class="card-header">
+                        <span class="badge verified"><i class="fa-solid fa-certificate"></i> Verified</span>
+                        <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?q=80&w=2670&auto=format&fit=crop"
+                            alt="Basmati Rice" class="product-img">
+                    </div>
+                    <div class="card-body">
+                        <h3>Organic Basmati Rice</h3>
+                        <div class="card-metric">
+                            <span><i class="fa-solid fa-location-dot"></i> Origin</span>
+                            <span>Dehradun, UK</span>
+                        </div>
+                        <div class="card-metric">
+                            <span><i class="fa-solid fa-temperature-half"></i> Quality</span>
+                            <span class="highlight-green">98/100</span>
+                        </div>
+                        <div class="card-metric">
+                            <span><i class="fa-solid fa-seedling"></i> Carbon</span>
+                            <span>-12g/kg</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="product-card glass-card">
+                    <div class="card-header">
+                        <span class="badge verified"><i class="fa-solid fa-certificate"></i> Verified</span>
+                        <img src="https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?q=80&w=2535&auto=format&fit=crop"
+                            alt="Mangoes" class="product-img">
+                    </div>
+                    <div class="card-body">
+                        <h3>Alphonso Mangoes</h3>
+                        <div class="card-metric">
+                            <span><i class="fa-solid fa-location-dot"></i> Origin</span>
+                            <span>Ratnagiri, MH</span>
+                        </div>
+                        <div class="card-metric">
+                            <span><i class="fa-solid fa-temperature-half"></i> Quality</span>
+                            <span class="highlight-saffron">Waitlist</span>
+                        </div>
+                        <div class="card-metric">
+                            <span><i class="fa-solid fa-truck"></i> Status</span>
+                            <span>In Transit</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="product-card glass-card">
+                    <div class="card-header">
+                        <span class="badge verified"><i class="fa-solid fa-certificate"></i> Verified</span>
+                        <img src="https://images.unsplash.com/photo-1597318181409-cf64d0b5d8a2?q=80&w=2670&auto=format&fit=crop"
+                            alt="Tea" class="product-img">
+                    </div>
+                    <div class="card-body">
+                        <h3>Darjeeling Tea</h3>
+                        <div class="card-metric">
+                            <span><i class="fa-solid fa-location-dot"></i> Origin</span>
+                            <span>Darjeeling, WB</span>
+                        </div>
+                        <div class="card-metric">
+                            <span><i class="fa-solid fa-temperature-half"></i> Quality</span>
+                            <span class="highlight-green">Premium</span>
+                        </div>
+                        <div class="card-metric">
+                            <span><i class="fa-solid fa-clock"></i> Harvest</span>
+                            <span>2 Days Ago</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="product-card glass-card">
+                    <div class="card-header">
+                        <span class="badge verified"><i class="fa-solid fa-certificate"></i> Verified</span>
+                        <img src="https://images.unsplash.com/photo-1615485925763-867862f8097a?q=80&w=2669&auto=format&fit=crop"
+                            alt="Turmeric" class="product-img">
+                    </div>
+                    <div class="card-body">
+                        <h3>Lakadong Turmeric</h3>
+                        <div class="card-metric">
+                            <span><i class="fa-solid fa-location-dot"></i> Origin</span>
+                            <span>Meghalaya</span>
+                        </div>
+                        <div class="card-metric">
+                            <span><i class="fa-solid fa-flask"></i> Curcumin</span>
+                            <span class="highlight-saffron">7.5%</span>
+                        </div>
+                        <div class="card-metric">
+                            <span><i class="fa-solid fa-check-circle"></i> Pure</span>
+                            <span>Certified</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted Partners -->
+    <section id="partners" class="partners-section">
+        <div class="container">
+            <h2 class="section-title">Trusted Partners</h2>
+            <p class="section-desc">Meet our network of verified farmers and suppliers across India.</p>
+
+            <div class="partners-grid">
+                <div class="partner-card glass-card">
+                    <div class="partner-avatar"><i class="fa-solid fa-user-farmer"></i></div>
+                    <h4>Rajesh Kumar</h4>
+                    <span class="region">Punjab</span>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i> 4.9
+                    </div>
+                    <p class="specialty">Grains & Wheat</p>
+                </div>
+                <div class="partner-card glass-card">
+                    <div class="partner-avatar"><i class="fa-solid fa-user"></i></div>
+                    <h4>Lakshmi Organics</h4>
+                    <span class="region">Kerala</span>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i> 5.0
+                    </div>
+                    <p class="specialty">Spices & Cardamom</p>
+                </div>
+                <div class="partner-card glass-card">
+                    <div class="partner-avatar"><i class="fa-solid fa-cow"></i></div>
+                    <h4>Amulya Dairy</h4>
+                    <span class="region">Gujarat</span>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i> 4.8
+                    </div>
+                    <p class="specialty">Dairy Products</p>
+                </div>
+                <!-- Tech Partners Logos -->
+                <div class="tech-partners glass-panel">
+                    <span>Partners:</span>
+                    <div class="brand-logo">India Organic</div>
+                    <div class="brand-logo">FSSAI</div>
+                    <div class="brand-logo">HyperLedger</div>
+                    <div class="brand-logo">IoT Sense</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Tracking Dashboard -->
+    <section id="dashboard" class="dashboard-section">
+        <div class="container">
+            <h2 class="section-title">Live Tracking Dashboard</h2>
+            <div class="dashboard-grid">
+                <div class="dash-panel glass-panel map-view">
+                    <h3><i class="fa-solid fa-map-location-dot"></i> Real-Time Shipment Tracking</h3>
+                    <div class="mock-map">
+                        <div class="map-point p1"></div>
+                        <div class="map-point p2"></div>
+                        <div class="map-route"></div>
+                        <div class="map-overlay">
+                            <span>Shipment #TRK-9901</span>
+                            <span class="status-live">Live</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="dash-panel glass-panel metrics-view">
+                    <h3><i class="fa-solid fa-chart-line"></i> Quality Metrics</h3>
+                    <div class="metric-row">
+                        <span>Temperature</span>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 20%; background: #00d2ff;"></div>
+                        </div>
+                        <span>4°C</span>
+                    </div>
+                    <div class="metric-row">
+                        <span>Humidity</span>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 65%; background: #138808;"></div>
+                        </div>
+                        <span>65%</span>
+                    </div>
+                    <div class="metric-row">
+                        <span>Freshness</span>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 92%; background: #ff9933;"></div>
+                        </div>
+                        <span>92%</span>
+                    </div>
+                </div>
+                <div class="dash-panel glass-panel docs-view">
+                    <h3><i class="fa-solid fa-file-contract"></i> Compliance</h3>
+                    <ul class="doc-list">
+                        <li><i class="fa-solid fa-check"></i> E-Certificate (Phyto)</li>
+                        <li><i class="fa-solid fa-check"></i> Lab Report #LR-552</li>
+                        <li><i class="fa-solid fa-check"></i> Origin Proof</li>
+                    </ul>
+                </div>
+                <div class="dash-panel glass-panel sus-view">
+                    <h3><i class="fa-solid fa-earth-asia"></i> Sustainability</h3>
+                    <div class="circle-chart">
+                        <span>A+</span>
+                        <p>Eco Score</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <footer id="join" class="newsletter-section">
+        <div class="container glass-panel footer-content">
+            <div class="footer-text">
+                <h2>Stay Connected</h2>
+                <p>Subscribe for updates on food safety, supply chain insights, and policy changes.</p>
+            </div>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SpiceTrace. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

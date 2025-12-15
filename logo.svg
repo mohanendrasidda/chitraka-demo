@@ -1,0 +1,39 @@
+<svg width="300" height="200" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gold Gradient -->
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#AA6C2B;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#AA6C2B;stop-opacity:1" />
+    </linearGradient>
+    <!-- Circuit Glow Filter -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- House Structure - Stylized Arch/Temple -->
+  <path d="M50 100 L150 40 L250 100 V160 H50 V100 Z" fill="none" stroke="url(#goldGradient)" stroke-width="8" />
+  
+  <!-- Digital/Circuit Lines (Left Side) -->
+  <path d="M70 160 V120 L90 110" stroke="#5B7FA6" stroke-width="2" fill="none" />
+  <circle cx="90" cy="110" r="3" fill="#5B7FA6" />
+  <path d="M80 160 V140 H100" stroke="#5B7FA6" stroke-width="2" fill="none" />
+  
+  <!-- Quill (Right Side overlay) -->
+  <path d="M180 80 Q220 40 260 50 Q240 90 200 120 Q190 125 180 130 L170 150 L180 120 Z" fill="url(#goldGradient)" filter="url(#glow)" />
+  <path d="M200 120 L230 80" stroke="#8a551e" stroke-width="2" />
+
+  <!-- Cube Icon (Center) -->
+  <path d="M140 130 L150 120 L160 130 L160 145 L150 155 L140 145 Z" fill="url(#goldGradient)" stroke="#1F1F1F" stroke-width="1" />
+  <path d="M140 130 L150 140 L160 130" stroke="#1F1F1F" stroke-width="1" fill="none" />
+  <path d="M150 140 V155" stroke="#1F1F1F" stroke-width="1" fill="none" />
+
+  <!-- Text -->
+  <text x="150" y="190" font-family="'Outfit', sans-serif" font-weight="700" font-size="32" text-anchor="middle" fill="url(#goldGradient)" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">CHITRAKA</text>
+  
+</svg>
