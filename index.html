@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chitraka | Blockchain Food Supply Chain Transparency</title>
+    <title>Chitraka | US Food Supply Chain Intelligence</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700&family=Space+Mono:wght@400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -16,122 +16,165 @@
 
 <body>
 
-    <!-- Navigation -->
+    <!-- Navbar -->
     <nav class="navbar">
-        <div class="container nav-container">
+        <div class="nav-container">
             <a href="index.html" class="logo">
-                <i class="fa-solid fa-link logo-blue"></i>
-                Chitraka
+                <span class="logo-icon"><i class="fa-solid fa-cube"></i></span> Chitraka
             </a>
             <ul class="nav-links">
-                <li class="nav-item"><a href="index.html" class="active">Overview</a></li>
-                <li class="nav-item"><a href="problem.html">The Problem</a></li>
-                <li class="nav-item"><a href="solution.html">Our Solution</a></li>
+                <li><a href="index.html" class="active">Platform</a></li>
+                <li><a href="problem.html">The Problem</a></li>
+                <li><a href="business.html">For Business</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
-            <a href="pilot.html" class="btn btn-primary nav-cta">Join Pilot</a>
+            <a href="pilot.html" class="btn btn-brand">Request Demo</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="hero-bg"></div>
-        <div class="container hero-grid">
+    <!-- Split Hero -->
+    <section class="hero">
+        <div class="hero-left">
             <div class="hero-content">
-                <span class="section-label highlight-urgency"><i class="fa-solid fa-triangle-exclamation"></i> Crisis
-                    Management</span>
-                <h1>Stop Contamination <br><span class="highlight-trust">Before It Spreads</span></h1>
-                <p class="hero-subtitle">Identify contaminated batches in <strong>seconds</strong>, not days. Protect
-                    your brand and consumers with real-time blockchain traceability.</p>
-                <div class="cta-group" style="display: flex; gap: 15px;">
-                    <a href="pilot.html" class="btn btn-primary">Request Demo</a>
-                    <a href="solution.html" class="btn btn-ghost">See How It Works</a>
-                </div>
-            </div>
-
-            <div class="hero-visual">
-                <!-- Scenario Card -->
-                <div class="glass-panel scenario-card">
-                    <div class="alert-header">
-                        <span class="alert-title">
-                            <div class="alert-pulse"></div> ACTIVE RECALL ALERT
-                        </span>
-                        <span class="mono" style="font-size: 0.8rem; color: var(--text-muted);">ID: #RCL-2025-09</span>
-                    </div>
-                    <div class="scenario-data">
-                        <div class="data-row">
-                            <span class="data-label">Item Tested</span>
-                            <span class="data-val">Romaine Lettuce</span>
-                        </div>
-                        <div class="data-row">
-                            <span class="data-label">Contaminant</span>
-                            <span class="data-val highlight-urgency">E. Coli O157</span>
-                        </div>
-                        <div class="data-row">
-                            <span class="data-label">Origin Batch</span>
-                            <span class="data-val"> Salinas-B442</span>
-                        </div>
-                        <div class="data-row">
-                            <span class="data-label">Impact Radius</span>
-                            <span class="data-val">3 States (CA, NV, AZ)</span>
-                        </div>
-                    </div>
-                    <div class="locate-btn">IMMEDIATE TRACE INITIATED</div>
-                </div>
+                <span
+                    style="color: var(--brand); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; display:block; margin-bottom: 10px;">End-to-End
+                    Traceability</span>
+                <h1>You ate lettuce in Chicago. Today it's recalled.</h1>
+                <p>The problem? No one knows the source. <br>Until now.</p>
+                <button class="btn btn-brand">See How It Works in 60s</button>
             </div>
         </div>
-    </header>
+        <div class="hero-right">
+            <div class="dash-mockup">
+                <div
+                    style="display:flex; justify-content:space-between; margin-bottom: 15px; border-bottom:1px solid #f1f5f9; padding-bottom:10px;">
+                    <span style="font-weight:600; font-size: 0.9rem;">Live Contamination Monitor</span>
+                    <span style="font-size: 0.8rem; color: #ef4444;"><i class="fa-solid fa-circle-exclamation"></i>
+                        ALERT ACTIVE</span>
+                </div>
 
-    <!-- Trust Indicators -->
-    <section class="trust-strip" style="padding: 40px 0; border-bottom: 1px solid var(--border-glass);">
-        <div class="container">
-            <p
-                style="text-align: center; margin-bottom: 20px; color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">
-                Trusted by Industry Leaders</p>
-            <div style="display: flex; justify-content: center; gap: 60px; opacity: 0.6; flex-wrap: wrap;">
-                <span><i class="fa-solid fa-leaf"></i> AGRO CORP</span>
-                <span><i class="fa-solid fa-truck"></i> LOGI-CHAIN</span>
-                <span><i class="fa-solid fa-seedling"></i> GREEN FIELD</span>
-                <span><i class="fa-solid fa-shield-halved"></i> SAFE FOODS</span>
+                <div class="map-container">
+                    <div class="us-map-bg"></div>
+                    <!-- Red Point (Traditional) -->
+                    <div class="map-point point-bad" id="pointBad"></div>
+                    <!-- Green Point (Chitraka) -->
+                    <div class="map-point point-good" id="pointGood"></div>
+                </div>
+
+                <div class="dash-stats">
+                    <div class="d-stat">
+                        <div class="d-stat-val" id="timeVal">72h</div>
+                        <div class="d-stat-label">Trace Time</div>
+                    </div>
+                    <div class="d-stat">
+                        <div class="d-stat-val" id="impactVal">37</div>
+                        <div class="d-stat-label">States Affected</div>
+                    </div>
+                    <div class="d-stat">
+                        <div class="d-stat-val" style="color: var(--brand);">12,847</div>
+                        <div class="d-stat-label">Batches Tracked</div>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-top: 30px; text-align: center;">
+                <button class="btn btn-outline" id="toggleScenario">Switch Scenario</button>
             </div>
         </div>
     </section>
 
-    <!-- Value Prop / Mini Problem Intro -->
-    <section class="problem-intro">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">The Cost of Blindness</span>
-                <h2 class="section-title">Every Second Counts During a Recall</h2>
-                <p style="max-width: 600px; margin: 0 auto; color: var(--text-muted);">Traditional supply chains take
-                    days to trace paperwork manually. Chitraka digitizes every node, turning physical movement into
-                    instant data.</p>
+    <!-- Trust Strip -->
+    <div style="background: #fff; padding: 40px 0; border-bottom: 1px solid #f1f5f9;">
+        <div class="container" style="text-align: center;">
+            <p
+                style="color: var(--text-muted); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px;">
+                Built for US Supply Chains & FDA Compliance</p>
+            <div
+                style="display: flex; justify-content: center; gap: 50px; flex-wrap: wrap; opacity: 0.6; filter: grayscale(100%);">
+                <span style="font-weight: 700; font-size: 1.2rem;">WHOLE FOODS</span>
+                <span style="font-weight: 700; font-size: 1.2rem;">SYSCO</span>
+                <span style="font-weight: 700; font-size: 1.2rem;">WALMART</span>
+                <span style="font-weight: 700; font-size: 1.2rem;">SOC 2 TYPE II</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vertical Scroll Chain Visualization -->
+    <section class="scrolly-chain">
+        <div class="container" style="text-align: center; margin-bottom: 60px;">
+            <h2 style="font-size: 2.5rem; color: var(--primary);">The Immutable Chain</h2>
+            <p style="color: var(--text-muted);">Scroll to trace the journey from soil to shelf.</p>
+        </div>
+
+        <div class="chain-viewer">
+            <!-- SVG Line that draws down -->
+            <svg class="central-line-svg" viewBox="0 0 4 800" preserveAspectRatio="none">
+                <line x1="2" y1="0" x2="2" y2="800" stroke="#cbd5e1" stroke-width="4" />
+                <line x1="2" y1="0" x2="2" y2="0" stroke="#F59E0B" stroke-width="4" id="draw-line" />
+            </svg>
+
+            <!-- Node 1: Farm -->
+            <div class="chain-node" data-index="1">
+                <div class="node-content">
+                    <h3 style="color: var(--primary); margin-bottom: 10px;">1. Harvest</h3>
+                    <p style="font-size: 0.9rem; color: #64748b;">GPS coordinates and harvest time recorded on
+                        blockchain. Soil health data attached.</p>
+                    <div
+                        style="margin-top: 15px; font-family: monospace; font-size: 0.8rem; background: #f1f5f9; padding: 8px; border-radius: 4px;">
+                        ID: #FARM-CA-992</div>
+                </div>
+                <div class="node-icon"><i class="fa-solid fa-leaf"></i></div>
+                <div style="width: 45%;"></div> <!-- Spacer -->
             </div>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-                <div class="glass-panel" style="padding: 30px;">
-                    <i class="fa-solid fa-clock highlight-urgency" style="font-size: 2rem; margin-bottom: 20px;"></i>
-                    <h3>Time is Revenue</h3>
-                    <p style="color: var(--text-muted); margin-top: 10px;">Average recall takes 5-7 days to locate
-                        documents. We do it in 5 seconds.</p>
-                </div>
-                <div class="glass-panel" style="padding: 30px;">
-                    <i class="fa-solid fa-bullseye highlight-trust" style="font-size: 2rem; margin-bottom: 20px;"></i>
-                    <h3>Surgical Precision</h3>
-                    <p style="color: var(--text-muted); margin-top: 10px;">Don't recall everything. Pinpoint exact
-                        contaminated batches and save the rest.</p>
-                </div>
-                <div class="glass-panel" style="padding: 30px;">
-                    <i class="fa-solid fa-hand-holding-heart"
-                        style="font-size: 2rem; margin-bottom: 20px; color: var(--accent-blue);"></i>
-                    <h3>Consumer Trust</h3>
-                    <p style="color: var(--text-muted); margin-top: 10px;">Transparent QR codes allow customers to scan
-                        and verify origin instantly.</p>
+            <!-- Node 2: Processing -->
+            <div class="chain-node" data-index="2">
+                <div style="width: 45%;"></div> <!-- Spacer -->
+                <div class="node-icon"><i class="fa-solid fa-industry"></i></div>
+                <div class="node-content">
+                    <h3 style="color: var(--primary); margin-bottom: 10px;">2. Processing</h3>
+                    <p style="font-size: 0.9rem; color: #64748b;">Washing and packaging. Safety sensors log temperature
+                        and water quality instantly.</p>
+                    <div
+                        style="margin-top: 15px; font-family: monospace; font-size: 0.8rem; background: #f1f5f9; padding: 8px; border-radius: 4px;">
+                        Temp: 34°F | Pathogen: NEG</div>
                 </div>
             </div>
 
-            <div style="text-align: center; margin-top: 50px;">
-                <a href="problem.html" class="btn btn-ghost" style="padding: 15px 40px;">Deep Dive: The $55B Problem <i
-                        class="fa-solid fa-arrow-right" style="margin-left: 10px;"></i></a>
+            <!-- Node 3: Distribution -->
+            <div class="chain-node" data-index="3">
+                <div class="node-content">
+                    <h3 style="color: var(--primary); margin-bottom: 10px;">3. Distribution</h3>
+                    <p style="font-size: 0.9rem; color: #64748b;">Real-time location tracking across state lines. Cold
+                        chain integrity verified by smart contracts.</p>
+                </div>
+                <div class="node-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                <div style="width: 45%;"></div> <!-- Spacer -->
+            </div>
+
+            <!-- Node 4: Retail -->
+            <div class="chain-node" data-index="4">
+                <div style="width: 45%;"></div> <!-- Spacer -->
+                <div class="node-icon"><i class="fa-solid fa-store"></i></div>
+                <div class="node-content">
+                    <h3 style="color: var(--primary); margin-bottom: 10px;">4. Retail</h3>
+                    <p style="font-size: 0.9rem; color: #64748b;">Inventory updated instantly. If a recall happens,
+                        block sale at the register automatically.</p>
+                </div>
+            </div>
+
+            <!-- Node 5: Consumer -->
+            <div class="chain-node" data-index="5">
+                <div class="node-content" style="border-top-color: var(--accent-safe);">
+                    <h3 style="color: var(--accent-safe); margin-bottom: 10px;">5. Consumer Safety</h3>
+                    <p style="font-size: 0.9rem; color: #64748b;">Shoppers scan QR codes to see the full journey.
+                        Complete transparency builds loyalty.</p>
+                    <button class="btn btn-outline" style="margin-top: 15px; padding: 6px 15px; font-size: 0.8rem;">View
+                        Sample Scan</button>
+                </div>
+                <div class="node-icon" style="background: var(--accent-safe);"><i class="fa-solid fa-user-check"></i>
+                </div>
+                <div style="width: 45%;"></div> <!-- Spacer -->
             </div>
         </div>
     </section>
@@ -139,41 +182,39 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="#" class="logo" style="margin-bottom: 15px; display: inline-flex;">
-                        <i class="fa-solid fa-link logo-blue"></i> Chitraka
-                    </a>
-                    <p style="color: var(--text-muted); font-size: 0.9rem; max-width: 300px;">
-                        Building the world's most transparent food supply chain on the blockchain.
-                    </p>
+            <div class="footer-cols">
+                <div class="footer-col">
+                    <a href="#" class="footer-logo"><i class="fa-solid fa-cube"></i> Chitraka</a>
+                    <p style="font-size: 0.9rem;">The US standard for blockchain food traceability.</p>
                 </div>
-                <div class="footer-links">
-                    <div class="link-group">
-                        <h4>Platform</h4>
-                        <ul>
-                            <li><a href="solution.html">How It Works</a></li>
-                            <li><a href="problem.html">Impact Analysis</a></li>
-                        </ul>
-                    </div>
-                    <div class="link-group">
-                        <h4>Company</h4>
-                        <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="#">Press</a></li>
-                        </ul>
-                    </div>
+                <div class="footer-col">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="security.html">Security</a></li>
+                        <li><a href="integrations.html">Integrations</a></li>
+                    </ul>
                 </div>
-                <div class="footer-cta">
-                    <a href="pilot.html" class="btn btn-outline"
-                        style="border: 1px solid var(--text-muted); width: 100%; text-align: center; margin-bottom: 15px;">Partnership
-                        Login</a>
-                    <a href="pilot.html" class="btn btn-primary" style="width: 100%;">Join Pilot Network</a>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="compliance.html">FDA/FSMA</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="footer-bottom">
-                &copy; 2025 Chitraka Inc. All rights reserved.
+            <div
+                style="margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; font-size: 0.8rem;">
+                &copy; 2025 Chitraka Inc. San Francisco, CA. All rights reserved.
             </div>
         </div>
     </footer>

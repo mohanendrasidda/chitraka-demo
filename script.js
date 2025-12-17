@@ -1,65 +1,101 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- Highlight Active Nav Link ---
-    const currentPath = window.location.pathname;
-    const navLinks = document.querySelectorAll('.nav-links a');
+    // --- Hero Dashboard Scenario Toggle ---
+    const toggleBtn = document.getElementById('toggleScenario');
+    const pointBad = document.getElementById('pointBad');
+    const pointGood = document.getElementById('pointGood');
+    const timeVal = document.getElementById('timeVal');
+    const impactVal = document.getElementById('impactVal');
 
-    navLinks.forEach(link => {
-        if (link.getAttribute('href') === currentPath.substring(currentPath.lastIndexOf('/') + 1)) {
-            link.classList.add('active');
-        }
+    let isTraditional = true;
+
+    if (toggleBtn) {
+        toggleBtn.addEventListener('click', () => {
+            if (isTraditional) {
+                // Switch to Chitraka (Good)
+                pointBad.style.display = 'none';
+                pointGood.style.display = 'block';
+
+                timeVal.innerText = '5s';
+                timeVal.style.color = 'var(--accent-safe)';
+
+                impactVal.innerText = '1';
+                impactVal.style.color = 'var(--accent-safe)';
+
+                toggleBtn.innerText = 'View Traditional Scenario';
+                isTraditional = false;
+            } else {
+                // Switch to Traditional (Bad)
+                pointBad.style.display = 'block';
+                pointGood.style.display = 'none';
+
+                timeVal.innerText = '72h';
+                timeVal.style.color = '#ef4444'; // Red
+
+                impactVal.innerText = '37';
+                impactVal.style.color = '#ef4444';
+
+                toggleBtn.innerText = 'View Chitraka Scenario';
+                isTraditional = true;
+            }
+        });
+    }
+
+    // --- Vertical Scroll Animation ---
+    const nodes = document.querySelectorAll('.chain-node');
+    const drawLine = document.getElementById('draw-line');
+
+    const observerOptions = {
+        threshold: 0.5,
+        rootMargin: "0px"
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+
+                // Animate line to this node's position roughly
+                const index = entry.target.getAttribute('data-index');
+                if (drawLine) {
+                    const yPos = index * 160; // Approx px per node spacing
+                    // drawLine.setAttribute('y2', yPos); // Needs more complex calc for precise SVG
+                    // For simplicitly we rely on the CSS reveal mostly
+                }
+            }
+        });
+    }, observerOptions);
+
+    nodes.forEach(node => {
+        observer.observe(node);
     });
 
-    // --- Timeline Animation (Problem Page) ---
-    const goodBar = document.querySelector('.good-bar');
-    if (goodBar) {
-        // Simple intersection observer to trigger animation
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    // Animate width to represent "5 Seconds" vs the full width
-                    // Visually we want it to shrink to a tiny sliver to show speed
-                    // But for the label to be readable we keep it small but visible
-                    // Actually, the CSS set it to 1% initially. Let's expand it slightly or keep it small.
-                    // The contrast is: Bad Bar = 100%, Good Bar = 2%
-                    // We can just add a class or set width directly if needed. 
-                    // Let's just ensure the transition happens.
-                    goodBar.style.width = '2%'; // Ensure it stays small or animates to this
-                }
-            });
-        });
-        observer.observe(goodBar);
-    }
+    // SVG Line Drawing Logic
+    // We want the orange line to grow as we scroll down the container
+    const chainSection = document.querySelector('.scrolly-chain');
 
-    // --- Pilot Form Handling ---
-    const form = document.getElementById('pilotForm');
-    if (form) {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const btn = form.querySelector('button[type="submit"]');
-            const originalText = btn.innerText;
+    window.addEventListener('scroll', () => {
+        if (!chainSection || !drawLine) return;
 
-            btn.innerText = 'Submitting...';
-            btn.style.opacity = '0.7';
+        const sectionTop = chainSection.offsetTop;
+        const sectionHeight = chainSection.offsetHeight;
+        const scrollY = window.scrollY;
+        const screenHeight = window.innerHeight;
 
-            // Mock submission
-            setTimeout(() => {
-                btn.innerText = 'Application Received';
-                btn.style.background = 'var(--india-green)'; // Using var even if not defined locally, fallback to color
-                btn.style.backgroundColor = '#138808';
-                form.reset();
-                setTimeout(() => {
-                    btn.innerText = originalText;
-                    btn.style.background = ''; // Reset to CSS
-                    btn.style.backgroundColor = '';
-                    btn.style.opacity = '1';
-                }, 3000);
-            }, 1500);
-        });
-    }
+        // Calculate percentage scrolled within the section
+        // Start drawing when section enters half viewport
+        const startPoint = sectionTop - screenHeight / 2;
+        const endPoint = sectionTop + sectionHeight - screenHeight;
 
-    // --- Hero Pulse Effect (Index Page) ---
-    // The CSS animation handles the red pulse, but we could add random data glitches here for "tech" feel
-    // if requested. For now, CSS keeps it clean.
+        if (scrollY > startPoint) {
+            let progress = (scrollY - startPoint) / (endPoint - startPoint);
+            if (progress > 1) progress = 1;
+            if (progress < 0) progress = 0;
+
+            // Map progress to line Y2 coordinate
+            const maxY = 800; // ViewBox height
+            drawLine.setAttribute('y2', progress * maxY);
+        }
+    });
 
 });

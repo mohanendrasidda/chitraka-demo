@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Problem | Chitraka</title>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700&family=Space+Mono:wght@400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -14,102 +14,54 @@
 
 <body>
 
-    <!-- Navigation (Identical for consistency) -->
+    <!-- Navbar -->
     <nav class="navbar">
-        <div class="container nav-container">
+        <div class="nav-container">
             <a href="index.html" class="logo">
-                <i class="fa-solid fa-link logo-blue"></i> Chitraka
+                <span class="logo-icon"><i class="fa-solid fa-cube"></i></span> Chitraka
             </a>
             <ul class="nav-links">
-                <li class="nav-item"><a href="index.html">Overview</a></li>
-                <li class="nav-item"><a href="problem.html" class="active">The Problem</a></li>
-                <li class="nav-item"><a href="solution.html">Our Solution</a></li>
+                <li><a href="index.html">Platform</a></li>
+                <li><a href="problem.html" class="active">The Problem</a></li>
+                <li><a href="business.html">For Business</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
-            <a href="pilot.html" class="btn btn-primary nav-cta">Join Pilot</a>
+            <a href="pilot.html" class="btn btn-brand">Request Demo</a>
         </div>
     </nav>
 
-    <div class="container" style="padding-top: 140px; padding-bottom: 60px;">
-        <span class="section-label highlight-urgency">Market Crisis</span>
-        <h1 class="section-title">The $55 Billion Blind Spot</h1>
-        <p style="max-width: 800px; font-size: 1.2rem; color: var(--text-muted); margin-bottom: 60px;">
-            The global food industry loses billions annually to recalls that are too slow and too broad. When you can't
-            see the source, you have to burn the whole field.
-        </p>
+    <header class="page-header">
+        <div class="container">
+            <h1>The $55 Billion Crisis</h1>
+            <p style="max-width: 600px; margin: 20px auto 0; opacity: 0.9;">US Food Supply Chains are breaking under the
+                weight of opacity.</p>
+        </div>
+    </header>
 
-        <!-- Stats Grid -->
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-bottom: 80px;">
-            <div class="glass-panel" style="padding: 30px; text-align: center;">
-                <h2 style="font-size: 3rem; color: var(--accent-urgency); margin-bottom: 10px;">$10M</h2>
-                <p class="mono" style="color: var(--text-muted);">Avg. Cost per Recall</p>
+    <div class="container" style="padding: 80px 0;">
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; text-align: center;">
+            <div style="padding: 40px; background: #fff; box-shadow: var(--card-shadow); border-radius: 8px;">
+                <h2 style="font-size: 3rem; color: #ef4444;">$55B</h2>
+                <p>Lost annually to recalls in the US</p>
             </div>
-            <div class="glass-panel" style="padding: 30px; text-align: center;">
-                <h2 style="font-size: 3rem; color: var(--text-main); margin-bottom: 10px;">48h+</h2>
-                <p class="mono" style="color: var(--text-muted);">Avg. Trace Time</p>
+            <div style="padding: 40px; background: #fff; box-shadow: var(--card-shadow); border-radius: 8px;">
+                <h2 style="font-size: 3rem; color: var(--primary);">48h</h2>
+                <p>Average time to identify source</p>
             </div>
-            <div class="glass-panel" style="padding: 30px; text-align: center;">
-                <h2 style="font-size: 3rem; color: var(--text-muted); margin-bottom: 10px;">60%</h2>
-                <p class="mono" style="color: var(--text-muted);">Food Waste in Recalls</p>
+            <div style="padding: 40px; background: #fff; box-shadow: var(--card-shadow); border-radius: 8px;">
+                <h2 style="font-size: 3rem; color: #64748b;">1 in 6</h2>
+                <p>Americans get sick annually (CDC)</p>
             </div>
         </div>
-
-        <!-- Comparison Visualization -->
-        <div class="comparison-container">
-            <div class="comparison-side">
-                <h3 class="highlight-urgency"><i class="fa-solid fa-file-contract"></i> Traditional Method</h3>
-                <p style="color: var(--text-muted); margin-bottom: 20px;">Manual phone calls, emails, and paper trail
-                    hunting across siloed databases.</p>
-
-                <div class="timeline-bar">
-                    <div class="bar-fill bad-bar">
-                        5 DAYS (120 HOURS)
-                    </div>
-                </div>
-                <ul style="list-style: none; margin-top: 20px; color: var(--text-muted);">
-                    <li><i class="fa-solid fa-xmark" style="color: var(--accent-urgency); width: 25px;"></i> Loss of
-                        Revenue</li>
-                    <li><i class="fa-solid fa-xmark" style="color: var(--accent-urgency); width: 25px;"></i> Brand
-                        Damage</li>
-                    <li><i class="fa-solid fa-xmark" style="color: var(--accent-urgency); width: 25px;"></i> Consumer
-                        Illness</li>
-                </ul>
-            </div>
-
-            <div class="comparison-side">
-                <h3 class="highlight-trust"><i class="fa-solid fa-link"></i> Chitraka Blockchain</h3>
-                <p style="color: var(--text-muted); margin-bottom: 20px;">Instant digital query of the immutable ledger
-                    for any specific batch ID.</p>
-
-                <div class="timeline-bar" style="background: rgba(10, 255, 194, 0.1);">
-                    <div class="bar-fill good-bar" style="width: 2%;">
-                        5 SECONDS
-                    </div>
-                </div>
-                <ul style="list-style: none; margin-top: 20px; color: var(--text-muted);">
-                    <li><i class="fa-solid fa-check" style="color: var(--accent-trust); width: 25px;"></i> Surgical
-                        Precision</li>
-                    <li><i class="fa-solid fa-check" style="color: var(--accent-trust); width: 25px;"></i> Consumer
-                        Protection</li>
-                    <li><i class="fa-solid fa-check" style="color: var(--accent-trust); width: 25px;"></i> Regulatory
-                        Compliance</li>
-                </ul>
-            </div>
-        </div>
-
-        <div style="text-align: center; margin-top: 80px;">
-            <h2 style="margin-bottom: 20px;">Stop the Bleeding</h2>
-            <p style="color: var(--text-muted); margin-bottom: 30px;">See how our technical solution implements this
-                speed.</p>
-            <a href="solution.html" class="btn btn-primary">View the Architecture <i class="fa-solid fa-arrow-right"
-                    style="margin-left: 10px;"></i></a>
-        </div>
-
     </div>
 
     <!-- Footer -->
     <footer>
-        <div class="container footer-bottom">
-            &copy; 2025 Chitraka Inc. All rights reserved.
+        <div class="container">
+            <div style="text-align: center; font-size: 0.9rem; color: #94a3b8;">
+                &copy; 2025 Chitraka Inc.
+            </div>
         </div>
     </footer>
 </body>
