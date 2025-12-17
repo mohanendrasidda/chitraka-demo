@@ -98,4 +98,46 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // --- Join Pilot Form Handling ---
+    const pilotForm = document.getElementById('pilotForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const successMessage = document.getElementById('successMessage');
+
+    if (pilotForm) {
+        pilotForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // validation handled by required attributes mostly, but good to have safety
+            const company = document.getElementById('companyName').value;
+            const contact = document.getElementById('contactName').value;
+            const email = document.getElementById('workEmail').value;
+            const role = document.getElementById('supplyRole').value;
+            const msg = document.getElementById('message').value;
+
+            // Show Loading
+            const btnText = submitBtn.querySelector('.btn-text');
+            const spinner = submitBtn.querySelector('.spinner');
+
+            btnText.style.display = 'none';
+            spinner.style.display = 'block';
+            submitBtn.disabled = true;
+
+            // Simulate API Call
+            setTimeout(() => {
+                console.log('Pilot Application:', { company, contact, email, role, msg });
+
+                // Hide Form & Show Success
+                pilotForm.querySelectorAll('.form-group').forEach(el => el.style.display = 'none');
+                submitBtn.style.display = 'none';
+                document.querySelector('.trust-indicator').style.display = 'none';
+
+                successMessage.style.display = 'block';
+
+                // Scroll to message if needed
+                successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+            }, 1500);
+        });
+    }
+
 });

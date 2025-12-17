@@ -517,3 +517,163 @@ footer {
 
     /* Mobile toggle needed */
 }
+
+/* Join Pilot Page Styles */
+.pilot-section {
+    min-height: 100vh;
+    padding-top: 120px;
+    /* Nav offset + spacing */
+    padding-bottom: 80px;
+    background-color: var(--primary);
+    /* Navy BG */
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20.5V18C20 4.2 12 1.5 12 0h2c0 1.2 7 3.5 7 17v3.5c0 13.5 7 15.8 7 17.5h-2c0-1.5-8-4.2-8-17.5zM20 19.5V22c0 13.8 8 16.5 8 18h-2c0-1.2-7-3.5-7-17v-3.5C19 6 12 3.7 12 2h2c0 1.5 8 4.2 8 17.5z' fill='%23F59E0B' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pilot-content {
+    text-align: center;
+    width: 100%;
+}
+
+.pilot-title {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.pilot-subtitle {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+}
+
+.pilot-form {
+    background: transparent;
+    /* Clean layout, maybe just the inputs */
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+    /* Optional card backing if needed, but request asked for clean layout */
+}
+
+.pilot-form label {
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 8px;
+    display: block;
+    font-size: 0.95rem;
+}
+
+.pilot-input {
+    width: 100%;
+    padding: 14px 16px;
+    background: #fff;
+    border: 1px solid #6B7280;
+    border-radius: 4px;
+    color: var(--text-main);
+    font-size: 1rem;
+    transition: var(--transition);
+    font-family: var(--font-body);
+}
+
+.pilot-input:focus {
+    outline: none;
+    border-color: #00D4FF;
+    /* Digital Cyan */
+    box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.2);
+}
+
+/* Hover state for inputs */
+.pilot-input:hover {
+    border-color: #94A3B8;
+}
+
+/* Specific spacing for this form */
+.pilot-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.btn-submit {
+    background-color: var(--brand);
+    /* Saffron Gold */
+    color: #fff;
+    /* White Text? Or maybe dark navy for contrast on gold? Request said dark text on input, button said "Use our brand's saffron gold". Usually white text on this gold. Let's check contrast. #F59E0B is readable with white or black. Let's stick to standard btn-brand style but custom hover. */
+    width: 100%;
+    padding: 16px;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #d97706;
+    /* Darker Gold manually approx 10% */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+}
+
+.trust-indicator {
+    margin-top: 24px;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    text-align: center;
+    opacity: 0.8;
+}
+
+.trust-indicator i {
+    color: var(--accent-safe);
+    margin-right: 6px;
+}
+
+.success-message {
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid var(--accent-safe);
+    padding: 24px;
+    border-radius: 8px;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.success-message i {
+    font-size: 2rem;
+    color: var(--accent-safe);
+    margin-bottom: 12px;
+}
+
+.success-message h3 {
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.success-message p {
+    color: var(--text-muted);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+    .pilot-title {
+        font-size: 2rem;
+    }
+
+    .pilot-section {
+        padding-top: 100px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
